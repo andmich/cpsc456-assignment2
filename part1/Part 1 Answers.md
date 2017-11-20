@@ -18,6 +18,6 @@ we successfully open the result.7z archive but it only contains worm.bat. After,
 
 - The main function for COPY is to copy one file from one location to another location. But it can also be used to create new files as seen in this part of the assignment. What this part of the assignment essentially did was append both "rick.gif" and "worm.7z" together as the source file and copied it to the target file named "result." /B allowed us to append the binary file "worm.bat" to "rick.gif" and copy it to the destination.
 
-17. This is useful for hiding malicious files because we can hide malicious batch files behind pictures. After the batch file is successfully concatenated to the gif, a user will simply see a "harmless" gif but in reality a very malicious script is there as well. Essentially it is almost like a Trojan horse virus.
+17. This is useful for hiding malicious files because we can hide malicious batch files behind pictures. After the batch file is successfully concatenated to the gif, a user will simply see a "harmless" gif but in reality a malicious script is there as well. Essentially it is like a Trojan horse malware.
 
-18. need to answer
+18. It is not very robust in terms of avoiding detection by anti-virus tools because most anti-virus software inspect the code of files or compare files to known viruses or malware. It is also not very robust since we just appending raw text. We did not use any polymorphic or metamorphic techniques to fight against anti-virus scanning tools.
