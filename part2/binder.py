@@ -68,7 +68,7 @@ def generateHeaderFile(execList, fileName):
 		progLens.append(numBytes)
 		progCount += 1
 
-		headerFile.write("new char[" + str(numBytes) + "]{")
+		headerFile.write("new unsigned char[" + str(numBytes) + "]{")
 		if value[-1] == ',':
 			value = value[:-1]
 		value = value.replace(",", ", ")
