@@ -58,7 +58,7 @@ def generateHeaderFile(execList, fileName):
 	firstValue = True
 	for progName in execList:
 		if progCount != 0:
-			print(",\n")
+			headerFile.write(",\n")
 		value = getHexDump(progName)
 		if value == None:
 			print("Error getting Hex dump for " + progName)
