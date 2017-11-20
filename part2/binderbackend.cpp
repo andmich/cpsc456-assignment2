@@ -20,12 +20,10 @@ int main()
 	for(int progCount = 0; 	progCount < NUM_BINARIES; ++progCount)
 	{
 
-		//TODO: Create a temporary file you can use the tmpnam() function for this.
+		// Create a temporary file you can use the tmpnam() function for this.
 		char* fileName = tmpnam(NULL);
 
-
-		//TODO: Open the file and write the bytes of the first program to the file.
-		//These bytes are found in codeArray[progCount]
+		// Open the file and write the bytes of the first program to the file.
 		FILE* fp = fopen(fileName, "wb");
 
 		if(!fp)
@@ -41,10 +39,10 @@ int main()
 		}
 		fclose(fp);
 
-		//TODO: Make the file executable: this can be done using chmod(fileName, 0777)
+		// Make the file executable.
 		chmod(fileName, 0777);
 
-		//TODO: Create a child process using fork
+		// Create a child process using fork
 		childProcId = fork();
 
 		if (childProcId < 0) { /* error occurred */
@@ -58,9 +56,6 @@ int main()
 				perror("execlp");
 				exit(-1);
 			}
-			//TODO: use execlp() in order to turn the child process into the process
-			//running the program in the above file.
-
 		}
 	}
 

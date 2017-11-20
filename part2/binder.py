@@ -76,8 +76,8 @@ def generateHeaderFile(execList, fileName):
 		headerFile.write("}")
 	headerFile.write("\n};")
 
+	# Write for programLengths
 	headerFile.write("\n\nunsigned programLengths[" + str(len(execList)) + "] = {")
-
 	for i in range(len(execList)):
 		if i != 0:
 			headerFile.write(", ")
@@ -85,7 +85,7 @@ def generateHeaderFile(execList, fileName):
 	headerFile.write("};")
 
 
-	# TODO: Write the number of programs.
+	# Write the number of programs.
 	headerFile.write("\n\n#define NUM_BINARIES " +  str(len(progNames) - 1))
 
 	# Close the header file
@@ -110,12 +110,6 @@ def compileFile(binderCppFileName, execName):
 		print("Compilation succeeded")
 	else:
 		print("Compilation failed")
-	# Run the process
-	# TODO: run the g++ compiler in order to compile backbinder.cpp
-	# If the compilation succeeds, print "Compilation succeeded"
-	# If compilation failed, then print "Compilation failed"
-	# Do not forget to add -std=gnu++11 flag to your compilation line
-
 
 generateHeaderFile(sys.argv[1:], FILE_NAME)
 compileFile("binderbackend.cpp", "bound")
