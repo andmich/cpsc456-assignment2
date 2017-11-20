@@ -20,4 +20,4 @@ we successfully open the result.7z archive but it only contains worm.bat. After,
 
 17. This is useful for hiding malicious files because we can hide malicious batch files behind pictures. After the batch file is successfully concatenated to the gif, a user will simply see a "harmless" gif but in reality a malicious script is there as well. Essentially it is like a Trojan horse malware.
 
-18. It is not very robust in terms of avoiding detection by anti-virus tools because most anti-virus software inspect the code of files or compare files to known viruses or malware. It is also not very robust since we just appending raw text. We did not use any polymorphic or metamorphic techniques to fight against anti-virus scanning tools.
+18. It is not very robust in terms of avoiding detection by anti-virus tools because most anti-virus software inspect the code of files or compare files to known viruses or malware. It is also not very robust since we are just appending raw text and did not use any polymorphic or metamorphic techniques to fight against anti-virus scanning tools.
