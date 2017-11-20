@@ -10,7 +10,7 @@
 - Command: python binder.py < PROG1 > <PROG2> ... <PROGN> where each < PROGi > is an executable program.
 - For example: python binder.py /usr/bin/ls /usr/bin/pwd
 
--- Upon "Compilation succeeded", run the following command: ./bound
+- Upon "Compilation succeeded", run the following command: ./bound
 
 ## Extra Credit
 None
